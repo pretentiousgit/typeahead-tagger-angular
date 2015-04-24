@@ -5,10 +5,10 @@ An Angular directive to supply twitter-style text entry with hashtag support.
 Include in vendor JS file and gulp as normal.
 
 Add to main Angular module with "typeaheadTagger":  
-`angular.module('myModule',['typeaheadTagger']);`
+```angular.module('myModule',['typeaheadTagger']);```
 
 Use within HTML partials by calling 'typeahead' attribute and setting options:  
-`<input type="text" ng-model="typeinput" typeahead="tag.name for tag in tags | filter:$viewValue | limitTo:8" class="input form-control" name="field-input">`
+```<input type="textarea" ng-model="typeinput" typeahead="tag.name for tag in tags | filter:$viewValue | limitTo:8">```
 
 In code, typeahead relies on an array list of objects, provided however one would like - [Bloodhound](https://github.com/twitter/typeahead.js/blob/master/doc/bloodhound.md "Bloodhound") by Twitter for the Twitter typeahead engine is a good one. It then repeats that list, allowing you to select the field you wish to appear in the list.
 
