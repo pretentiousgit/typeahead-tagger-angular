@@ -2,7 +2,7 @@
 An Angular directive to supply twitter-style text entry with hashtag support.
 
 ### Use
-Include in vendor JS file and gulp as normal.
+Include in vendor JS file and Gulp as normal.
 
 Add to main Angular module with "typeaheadTagger":  
 ```javascript
@@ -19,21 +19,21 @@ In code, typeahead relies on an array list of objects, provided however one woul
 
 #### Options
 
-keyOff     : The character to match to fire typeahead menu (not working in 0.1)
+**keyOff**     : The character to match to fire typeahead menu (not working in 0.1)
 
-minLength  : Minimum length of typing after '#' to fire matcher
+**minLength**  : Minimum length of typing after '#' to fire matcher
 
-waitMs     : minimal wait time after last character typed before typehead kicks-in
+**waitMs**     : minimal wait time after last character typed before typehead kicks-in
 
-isEditable : should it restrict model values to the ones selected from the popup only?
+**isEditable** : should it restrict model values to the ones selected from the popup only?
 
-loading    : Are matches being returned asynchronously?
+**loading**    : Are matches being returned asynchronously?
 
-onSelect   : A callback fired on selection
+**onSelect**   : A callback fired on selection
 
-limitTo    : Maximum number of results permitted as a match
+**limitTo**    : Maximum number of results permitted as a match
 
-focusFirst : Should the first match in the list have automatic focus?
+**focusFirst** : Should the first match in the list have automatic focus?
 
 
 ### Expected Behaviour
