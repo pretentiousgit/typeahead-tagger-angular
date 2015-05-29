@@ -379,10 +379,11 @@ angular.module('typeaheadInputBox', ['DOMposition', 'bindHtml'])
                     scope.$digest();
                 }
 
-                if (evt.which === 32) {
+                if (evt.which === 32 || evt.which === 46 ||  evt.which === 44 ) {
                     // SPACE keypress =========
                     // add a space to the model and cancel the dropdown
                     // post the tag to the scope-tags for comparision
+                    enterCount = 0;
                     evt.stopPropagation();
                     resetMatches();
                     scope.$digest();
@@ -414,9 +415,8 @@ angular.module('typeaheadInputBox', ['DOMposition', 'bindHtml'])
 
                     } else if (evt.which === 13 || evt.which === 9) {
                         
-                        console.log(enterCount);
+                        console.log(enterCount, scope.activeIdx);
                         // ENTER or TAB keypress =========
-
                         if(enterCount === 0){
                             scope.$apply(function() {
                                 scope.select(scope.activeIdx);
@@ -427,7 +427,7 @@ angular.module('typeaheadInputBox', ['DOMposition', 'bindHtml'])
                             enterCount = 0;
                             evt.stopPropagation();
                             resetMatches();
-                            scope.$digest();   
+                            scope.$digest();
                         }
 
                     } else if (evt.which === 27) {
